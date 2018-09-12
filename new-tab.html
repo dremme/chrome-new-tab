@@ -1,10 +1,7 @@
-<!--
-    TODO: add a vignette maybe?
--->
 <html>
     <head>
         <title>New Tab</title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,700" rel="stylesheet">
         <style>
             html, body {
                 background: black;
@@ -16,6 +13,7 @@
             }
             body {
                 background: url(https://picsum.photos/1920/1080/?random);
+                /* background: url(https://loremflickr.com/1920/1080/nature); */
                 background-size: 100%;
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -28,23 +26,19 @@
                 align-items: center;
                 flex-direction: column;
             }
-            .time, .date, .greeting {
-                color: rgba(255,255,255,0.8);
+            .time, .date {
+                color: rgba(255,255,255,0.85);
+                text-shadow: 0.05em 0.1em rgba(0,0,0,0.2);
+                user-select: none;
                 /* mix-blend-mode: overlay; */
             }
-            .time, .date {
-                font-weight: bold;
-            }
             .time {
-                font-size: 10em;
-                text-shadow: 3px 3px rgba(0,0,0,0.15);
+                font-size: 50vh;
+                font-weight: 300;
             }
-            .date, .greeting {
-                font-size: 2em;
-                text-shadow: 1px 1px rgba(0,0,0,0.15);
-            }
-            .greeting {
-                margin-top: 2em;
+            .date {
+                font-size: 4vh;
+                font-weight: 700;
             }
         </style>
     </head>
@@ -52,7 +46,6 @@
         <div class="container">
             <div id="time" class="time"></div>
             <div id="date" class="date"></div>
-            <div class="greeting">Have a nice day, Dennis!</div>
         </div>
         <script src="new-tab.js"></script>
     </body>
