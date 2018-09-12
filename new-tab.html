@@ -1,0 +1,59 @@
+<!--
+    TODO: add a vignette maybe?
+-->
+<html>
+    <head>
+        <title>New Tab</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <style>
+            html, body {
+                background: black;
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                font: 14px "Roboto", sans-serif;
+                line-height: 1;
+            }
+            body {
+                background: url(https://picsum.photos/1920/1080/?random);
+                background-size: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .container {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+            .time, .date, .greeting {
+                color: rgba(255,255,255,0.8);
+                /* mix-blend-mode: overlay; */
+            }
+            .time, .date {
+                font-weight: bold;
+            }
+            .time {
+                font-size: 10em;
+                text-shadow: 3px 3px rgba(0,0,0,0.15);
+            }
+            .date, .greeting {
+                font-size: 2em;
+                text-shadow: 1px 1px rgba(0,0,0,0.15);
+            }
+            .greeting {
+                margin-top: 2em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div id="time" class="time"></div>
+            <div id="date" class="date"></div>
+            <div class="greeting">Have a nice day, Dennis!</div>
+        </div>
+        <script src="new-tab.js"></script>
+    </body>
+</html>

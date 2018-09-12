@@ -1,0 +1,9 @@
+{
+    "name": "New Tab",
+    "description" : "A very simple new tab extension.",
+    "version": "1.0",
+    "manifest_version": 2,
+    "chrome_url_overrides" : {
+        "newtab": "new-tab.html"
+    }
+}
