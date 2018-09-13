@@ -1,52 +1,19 @@
 <html>
-    <head>
-        <title>New Tab</title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,700" rel="stylesheet">
-        <style>
-            html, body {
-                background: black;
-                margin: 0;
-                padding: 0;
-                height: 100%;
-                font: 14px "Roboto", sans-serif;
-                line-height: 1;
-            }
-            body {
-                background: url(https://picsum.photos/1920/1080/?random);
-                /* background: url(https://loremflickr.com/1920/1080/nature); */
-                background-size: 100%;
-                background-size: cover;
-                background-repeat: no-repeat;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            .container {
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-            }
-            .time, .date {
-                color: rgba(255,255,255,0.85);
-                text-shadow: 0.05em 0.1em rgba(0,0,0,0.2);
-                user-select: none;
-                /* mix-blend-mode: overlay; */
-            }
-            .time {
-                font-size: 50vh;
-                font-weight: 300;
-            }
-            .date {
-                font-size: 4vh;
-                font-weight: 700;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div id="time" class="time"></div>
-            <div id="date" class="date"></div>
-        </div>
-        <script src="new-tab.js"></script>
-    </body>
+<head>
+    <title>New Tab</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,700" rel="stylesheet">
+    <link href="new-tab.css" rel=stylesheet>
+</head>
+<body>
+    <div id="clock" class="clock-container">
+        <div id="second" class="mark-container-second"><div class="mark-second"></div></div>
+        <div id="minute" class="mark-container-minute"><div class="mark-minute"></div></div>
+        <div id="hour" class="mark-container-hour"><div class="mark-hour"></div></div>
+    </div>
+    <div class="container">
+        <div id="time" class="time"></div>
+        <div id="date" class="date"></div>
+    </div>
+    <script src="new-tab.js"></script>
+</body>
 </html>

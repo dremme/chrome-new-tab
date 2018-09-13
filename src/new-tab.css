@@ -1,0 +1,104 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: black;
+    font: 14px "Roboto", sans-serif;
+    line-height: 1;
+}
+
+body {
+    position: relative;
+    background: url(https://picsum.photos/1920/1080/?random);
+    /* background: url(https://loremflickr.com/1920/1080/nature); */
+    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+}
+
+.container, .clock-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.time, .date {
+    color: rgba(255, 255, 255, .8);
+    user-select: none;
+}
+
+.time {
+    font-size: 30vh;
+    font-weight: 300;
+    text-shadow: 0 0 20vh rgba(0, 0, 0, 1), 2vh 3vh rgba(0, 0, 0, .15);
+}
+
+.date {
+    font-size: 4vh;
+    font-weight: 700;
+    text-shadow: 1vh 1.5vh rgba(0, 0, 0, .15);
+}
+
+.mark-container, .mark-container-second, .mark-container-minute, .mark-container-hour {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: calc(50% - 45vh);
+    height: 90vh;
+}
+
+.mark-container-second, .mark-container-minute, .mark-container-hour {
+    left: calc(50% - .25vh);
+    width: .5vh;
+}
+
+.mark-second, .mark-minute, .mark-hour {
+    width: .5vh;
+    background-color: rgba(255, 255, 255, .8);
+    box-shadow: 1vh 1vh rgba(0, 0, 0, .15);
+}
+
+.mark-second {
+    height: 20vh;
+}
+
+.mark-minute {
+    height: 15vh;
+}
+
+.mark-hour {
+    height: 10vh;
+}
+
+.mark-container {
+    left: calc(50% - .125vh);
+    width: .25vh;
+}
+
+.mark-mini {
+    width: .1vh;
+    height: 3vh;
+    background-color: rgba(255, 255, 255, .4);
+}
+
+.mark-small {
+    width: .25vh;
+    height: 5vh;
+    background-color: rgba(255, 255, 255, .4);
+}
+
+.mark-big {
+    width: .25vh;
+    height: 7vh;
+    background-color: rgba(255, 255, 255, .6);
+}
