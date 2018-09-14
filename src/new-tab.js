@@ -28,20 +28,19 @@ const update = () => {
     time.innerHTML = `${pad(now.getHours())}:${pad(now.getMinutes())}`
     date.innerHTML = `${days[now.getDay()]}, ${pad(now.getDate())}. ${months[now.getMonth() - 1]} ${now.getFullYear()}`
 
-    second.style.transform = `rotate(${now.getSeconds() / 60 * 360}deg)`
-    minute.style.transform = `rotate(${now.getMinutes() / 60 * 360 + now.getSeconds() / 60 * 6}deg)`
-    hour.style.transform   = `rotate(${(now.getHours() % 12) / 12 * 360 + now.getMinutes() / 60 * 30}deg)`
+    const rotS =          now.getSeconds()      / 60       * 360
+               + Math.sin(now.getMilliseconds() * 0.00157) *   6
+    
+    const rotM = now.getMinutes() / 60 * 360
+               + now.getSeconds() / 60 *   6
+
+    const rotH = now.getHours() % 12 / 12 * 360
+               + now.getMinutes()    / 60 *  30
+
+    second.style.transform = `rotate(${rotS}deg)`
+    minute.style.transform = `rotate(${rotM}deg)`
+    hour.style.transform   = `rotate(${rotH}deg)`
 }
 
-/*let lastTime = +new Date();
-const interpolate = () => {
-    const time = +new Date();
-    if (time - lastTime >= 1000) lastTime = time
-    const delta = (time - lastTime) / 1000
-    second.style.transform = `rotate(${rotation + Math.sin(delta * Math.PI / 2) * 6}deg)`
-}*/
-
 update()
-// TODO: change to animation frames
-setInterval(update, 1000)
-//setInterval(interpolate, 1)
+setInterval(update, 1)
