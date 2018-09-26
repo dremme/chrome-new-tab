@@ -34,7 +34,7 @@ const update = () => {
     else if (now.getHours() >= 12 && now.getHours() < 14) g = greetings[2] // Good day
     else if (now.getHours() >= 14 && now.getHours() < 18) g = greetings[3] // Good afternoon
     else if (now.getHours() >= 18 && now.getHours() < 22) g = greetings[4] // Good evening
-    else if (now.getHours() >= 22 && now.getHours() <  3) g = greetings[5] // Good night
+    else if (now.getHours() >= 22 || now.getHours() <  3) g = greetings[5] // Good night
     greeting.innerHTML = g
 
     time.innerHTML = `${pad(now.getHours())}:${pad(now.getMinutes())}`
