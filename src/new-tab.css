@@ -40,19 +40,19 @@ body {
 .time {
     font-size: 30vh;
     font-weight: 300;
-    text-shadow: 0 0 20vh rgba(0, 0, 0, 1), 2vh 3vh rgba(0, 0, 0, .15);
+    text-shadow: 0 0 20vh rgba(0, 0, 0, 1), 1vh 1.5vh .5vh rgba(0, 0, 0, .15);
 }
 
 .date {
     font-size: 5vh;
     font-weight: 700;
-    text-shadow: .5vh .75vh rgba(0, 0, 0, .15);
+    text-shadow: .5vh .75vh .5vh rgba(0, 0, 0, .15);
 }
 
 .greeting {
     font-size: 4vh;
     font-weight: 700;
-    text-shadow: .5vh .75vh rgba(0, 0, 0, .15);
+    text-shadow: .3vh .5vh .5vh rgba(0, 0, 0, .15);
 }
 
 .mark-container, .mark-container-second, .mark-container-minute, .mark-container-hour {
