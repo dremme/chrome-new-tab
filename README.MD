@@ -1,5 +1,9 @@
 # New Tab Extension
 
+A new tab extension for Google Chrome displaying a simple clock and a beautiful WebGL shader animation.
+
+Most shaders are sourced from [Shadertoy](https://shadertoy.com). Credit to the respective author is given.
+
 ![image1](img1.png)
 
   1. Open the Chrome extension settings.
@@ -14,4 +18,3 @@ Alternatively, when the warning keeps popping up, use the attached CRX-file in t
 
  1. Add this extension to the official extension store.
  2. Add some settings and localization.
- 3. Experimental: add real time ambient shader animations from [Shadertoy](https://shadertoy.com).

@@ -1,7 +1,7 @@
 {
     "name": "New Tab",
-    "description" : "A very simple new tab extension.",
-    "version": "1.0",
+    "description" : "A new tab extension displaying a simple clock and a beautiful WebGL shader animation.",
+    "version": "1.1",
     "manifest_version": 2,
     "chrome_url_overrides" : {
         "newtab": "new-tab.html"

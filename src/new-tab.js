@@ -38,7 +38,7 @@ const update = () => {
     greeting.innerHTML = g
 
     time.innerHTML = `${pad(now.getHours())}:${pad(now.getMinutes())}`
-    date.innerHTML = `${days[now.getDay()]}, ${pad(now.getDate())}. ${months[now.getMonth() - 1]} ${now.getFullYear()}`
+    date.innerHTML = `${days[now.getDay()]}, ${now.getDate()}. ${months[now.getMonth() - 1]} ${now.getFullYear()}`
 
     const s =          now.getSeconds()      / 60       * 360
             + Math.sin(now.getMilliseconds() * 0.00157) *   6
