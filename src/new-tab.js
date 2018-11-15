@@ -1,3 +1,4 @@
+const suffix    = ['th', 'st', 'nd', 'rd', 'th', 'th', 'th', 'th', 'th', 'th']
 const days      = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 const months    = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Oct', 'Nov', 'Dec']
 const greetings = ['Good early morning!', 'Good morning!', 'Good day!', 'Good afternoon!', 'Good evening!', 'What a wonderful night!']
@@ -24,7 +25,8 @@ for (let d = 0; d < 360; d += 6) {
     clock.appendChild(markContainer)
 }
 
-const pad = n => n < 10 ? '0' + n : n
+const pad = n => `${n < 10 ? '0' : ''}${n}`
+const getSuffix = n => suffix[n === 11 || n === 12 ? 0 : n % 10]
 const update = () => {
     const now = new Date()
 
@@ -38,7 +40,7 @@ const update = () => {
     greeting.innerHTML = g
 
     time.innerHTML = `${pad(now.getHours())}:${pad(now.getMinutes())}`
-    date.innerHTML = `${days[now.getDay()]}, ${now.getDate()}. ${months[now.getMonth() - 1]} ${now.getFullYear()}`
+    date.innerHTML = `${days[now.getDay()]}, ${now.getDate()}<sup>${getSuffix(now.getDate())}</sup> ${months[now.getMonth() - 1]} ${now.getFullYear()}`
 
     const s =          now.getSeconds()      / 60       * 360
             + Math.sin(now.getMilliseconds() * 0.00157) *   6
