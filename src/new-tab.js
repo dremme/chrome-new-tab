@@ -26,7 +26,7 @@ for (let d = 0; d < 360; d += 6) {
 }
 
 const pad = n => `${n < 10 ? '0' : ''}${n}`
-const getSuffix = n => suffix[n === 11 || n === 12 ? 0 : n % 10]
+const getSuffix = n => suffix[n >= 11 && n <= 13 ? 0 : n % 10]
 const update = () => {
     const now = new Date()
 
